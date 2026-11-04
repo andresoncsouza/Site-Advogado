@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andreson & Associados | Advocacia e Consultoria Jurídica</title>
+    <title>Andreson Costa Advocacia & Consultoria Jurídica</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,6 @@
             overflow-x: hidden;
         }
 
-        /* Utility Classes */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -124,7 +123,6 @@
             background: rgba(10, 17, 24, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(197, 160, 89, 0.15);
-            transition: all 0.3s ease;
         }
 
         .navbar {
@@ -149,14 +147,14 @@
 
         .logo-text h1 {
             font-family: var(--font-title);
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1.1;
         }
 
         .logo-text span {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--gold-primary);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -188,10 +186,11 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
+        /* Hero Section com Foto */
         .hero {
             padding: 180px 0 100px;
-            background: linear-gradient(135deg, rgba(10, 17, 24, 0.92) 0%, rgba(18, 28, 39, 0.88) 100%),
+            background: linear-gradient(135deg, rgba(10, 17, 24, 0.90) 0%, rgba(18, 28, 39, 0.85) 100%),
+                        url('foto.jpg') center/cover no-repeat,
                         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             min-height: 90vh;
             display: flex;
@@ -300,13 +299,13 @@
 
         .about-experience-card h3 {
             font-family: var(--font-title);
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--gold-primary);
             line-height: 1;
         }
 
         .about-experience-card p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -633,58 +632,10 @@
             color: var(--text-muted);
         }
 
-        .oab-notice {
-            margin-top: 15px;
-            font-size: 0.75rem;
-            color: #64748b;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background: var(--bg-card);
-            border: 1px solid var(--gold-primary);
-            padding: 40px;
-            border-radius: 4px;
-            max-width: 500px;
-            width: 100%;
-            position: relative;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            cursor: pointer;
-        }
-
-        /* Responsive Design */
         @media (max-width: 992px) {
-            .hero-title {
-                font-size: 3rem;
-            }
-            .about-grid, .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .hero-title { font-size: 3rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -699,22 +650,11 @@
                 padding: 30px;
                 border-bottom: 1px solid var(--border-color);
             }
-            .nav-links.active {
-                display: flex;
-            }
-            .menu-btn {
-                display: block;
-            }
-            .hero-title {
-                font-size: 2.4rem;
-            }
-            .hero-badges {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+            .nav-links.active { display: flex; }
+            .menu-btn { display: block; }
+            .hero-title { font-size: 2.4rem; }
+            .hero-badges { flex-direction: column; gap: 20px; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -740,7 +680,7 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
 
-                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." target="_blank" class="btn btn-gold btn-header">
+                <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." target="_blank" class="btn btn-gold btn-header">
                     <i class="fa-brands fa-whatsapp"></i> Fale Conosco
                 </a>
 
@@ -761,7 +701,7 @@
                     Oferecemos soluções jurídicas personalizadas com foco em resultados concretos, transparência e dedicação integral à defesa dos seus direitos.
                 </p>
                 <div class="hero-btns">
-                    <a href="https://wa.me/5500000000000?text=Olá,%20preciso%20de%20atendimento%20jurídico%20especializado." target="_blank" class="btn btn-gold">
+                    <a href="https://wa.me/5541991979594?text=Olá,%20preciso%20de%20atendimento%20jurídico%20especializado." target="_blank" class="btn btn-gold">
                         <i class="fa-brands fa-whatsapp"></i> Agendar Atendimento
                     </a>
                     <a href="#atuacao" class="btn btn-outline">Áreas de Atuação</a>
@@ -791,10 +731,10 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-img-container">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Advogado Responsável" class="about-img">
+                    <img src="foto.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80';" alt="Advogado Andreson Costa" class="about-img">
                     <div class="about-experience-card">
-                        <h3>10+</h3>
-                        <p>Anos de Experiência</p>
+                        <h3>OAB/PR</h3>
+                        <p>Atuação de Excelência</p>
                     </div>
                 </div>
                 <div class="about-text">
@@ -804,12 +744,12 @@
                         Fundado sobre os pilares da ética, da atualização constante e da eficiência, nosso escritório atua na solução de conflitos complexos, unindo a visão acadêmica rigorosa à prática forense dinâmica.
                     </p>
                     <p>
-                        Entendemos que cada demanda exige uma abordagem única. Por isso, trabalhamos lado a lado com nossos clientes para construir estratégias jurídicas robustas, minimizando riscos e maximizando resultados.
+                        Entendemos que cada demanda exige uma abordagem única. Por isso, trabalhamos lado a lado com nossos clientes para construir estratégias jurídicas robustas, minimizando riscos e maximizando resultados em Curitiba e região.
                     </p>
                     <ul class="about-highlights">
                         <li><i class="fa-solid fa-circle-check"></i> Análise minuciosa de viabilidade de cada caso</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Comunicação clara, direta e sem "juridiquês"</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Acompanhamento em tempo real de processos</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Comunicação clara, direta e transparente</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Acompanhamento em tempo real dos processos</li>
                     </ul>
                 </div>
             </div>
@@ -824,47 +764,41 @@
                 <h2>Áreas de Atuação</h2>
             </div>
             <div class="practices-grid">
-                
-                <!-- Card 1 -->
                 <div class="practice-card">
                     <div>
                         <i class="fa-solid fa-gavel practice-icon"></i>
                         <h3>Direito Penal</h3>
-                        <p>Defesa técnica especializada em inquéritos policiais, ações penais, habeas corpus e suporte em situações de urgência 24h.</p>
+                        <p>Defesa técnica especializada em inquéritos policiais, ações penais, habeas corpus e suporte em situações de urgência.</p>
                     </div>
-                    <a href="#" class="practice-link open-modal-btn" data-area="Direito Penal">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20informações%20sobre%20Direito%20Penal." target="_blank" class="practice-link">Falar sobre este caso <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="practice-card">
                     <div>
                         <i class="fa-solid fa-file-contract practice-icon"></i>
                         <h3>Direito Civil & Contratos</h3>
                         <p>Elaboração e revisão contratual, responsabilidade civil, indenizações, cobranças patrimoniais e resolução de litígios.</p>
                     </div>
-                    <a href="#" class="practice-link open-modal-btn" data-area="Direito Civil">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20informações%20sobre%20Direito%20Civil." target="_blank" class="practice-link">Falar sobre este caso <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="practice-card">
                     <div>
-                        <i class="fa-solid fa-heart-pulse practice-icon"></i>
-                        <h3>Direito da Saúde & Consumidor</h3>
-                        <p>Ações contra planos de saúde para liberação de cirurgias, tratamentos, medicamentos de alto custo e defesa do consumidor.</p>
+                        <i class="fa-solid fa-user-shield practice-icon"></i>
+                        <h3>Direito do Consumidor</h3>
+                        <p>Proteção rigorosa contra práticas abusivas, contencioso contra planos de saúde, instituições financeiras e fornecedores.</p>
                     </div>
-                    <a href="#" class="practice-link open-modal-btn" data-area="Direito da Saúde">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20informações%20sobre%20Direito%20do%20Consumidor." target="_blank" class="practice-link">Falar sobre este caso <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="practice-card">
                     <div>
-                        <i class="fa-solid fa-people-roof practice-icon"></i>
-                        <h3>Família & Sucessões</h3>
-                        <p>Divórcios, planejamento sucessório, inventários judiciais e extrajudiciais, pensão alimentícia e guarda de menores.</p>
+                        <i class="fa-solid fa-scale-balanced practice-icon"></i>
+                        <h3>Consultoria Jurídica</h3>
+                        <p>Atuação preventiva estratégica para pessoas físicas e jurídicas, visando mitigar riscos e assegurar direitos.</p>
                     </div>
-                    <a href="#" class="practice-link open-modal-btn" data-area="Família e Sucessões">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20agendar%20uma%20consultoria%20jurídica." target="_blank" class="practice-link">Falar sobre este caso <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -922,7 +856,7 @@
                         <i class="fa-brands fa-whatsapp"></i>
                         <div>
                             <h4>WhatsApp / Telefone</h4>
-                            <p>(41) 99999-8888</p>
+                            <p>(41) 99197-9594</p>
                         </div>
                     </div>
 
@@ -950,28 +884,25 @@
                             <input type="text" id="name" class="form-control" required placeholder="Seu nome completo">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" required placeholder="seu@email.com">
-                        </div>
-                        <div class="form-group">
                             <label for="phone">Telefone / WhatsApp</label>
-                            <input type="tel" id="phone" class="form-control" required placeholder="(00) 00000-0000">
+                            <input type="tel" id="phone" class="form-control" required placeholder="(41) 99197-9594">
                         </div>
                         <div class="form-group">
                             <label for="subject">Assunto Principal</label>
                             <select id="subject" class="form-control">
-                                <option value="Penal">Direito Penal</option>
-                                <option value="Civil">Direito Civil</option>
-                                <option value="Saude">Direito da Saúde</option>
-                                <option value="Familia">Família / Sucessões</option>
-                                <option value="Outro">Outro Assunto</option>
+                                <option value="Direito Penal">Direito Penal</option>
+                                <option value="Direito Civil & Contratos">Direito Civil & Contratos</option>
+                                <option value="Direito do Consumidor">Direito do Consumidor</option>
+                                <option value="Outro Assunto">Outro Assunto</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Resumo do Caso</label>
-                            <textarea id="message" class="form-control" placeholder="Descreva brevemente sua situação..."></textarea>
+                            <textarea id="message" class="form-control" required placeholder="Descreva brevemente sua situação..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-gold" style="width: 100%;">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar Mensagem via WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
@@ -990,58 +921,37 @@
                             <span>Advocacia & Consultoria</span>
                         </div>
                     </a>
-                    <p>Prestação de serviços jurídicos pautada pelo rigor acadêmico, pela ética e pelo compromisso com a defesa incontestável dos interesses de nossos clientes.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
+                    <p>Defesa técnica rigorosa, atuação ética e soluções jurídicas estratégicas em Curitiba - PR.</p>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Links Rápidos</h4>
+                    <h4>Navegação</h4>
                     <ul>
                         <li><a href="#inicio">Início</a></li>
                         <li><a href="#sobre">Sobre o Escritório</a></li>
                         <li><a href="#atuacao">Áreas de Atuação</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#contato">Agendamento</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Áreas Principais</h4>
+                    <h4>Contato Direto</h4>
                     <ul>
-                        <li><a href="#atuacao">Direito Penal Estratégico</a></li>
-                        <li><a href="#atuacao">Direito Civil e Imobiliário</a></li>
-                        <li><a href="#atuacao">Ações contra Planos de Saúde</a></li>
-                        <li><a href="#atuacao">Inventários e Sucessões</a></li>
+                        <li><a href="https://wa.me/5541991979594" target="_blank">(41) 99197-9594</a></li>
+                        <li><a href="mailto:contato@costaadvocacia.com.br">contato@costaadvocacia.com.br</a></li>
+                        <li>Av. Cândido de Abreu, 526</li>
+                        <li>Centro Cívico - Curitiba/PR</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Costa & Associados Advocacia. Todos os direitos reservados.</p>
-                <p class="oab-notice">Este site possui caráter meramente informativo e obedece rigorosamente às diretrizes do Código de Ética e Disciplina da OAB e ao Provimento nº 205/2021 do CFOAB.</p>
+                <p>&copy; 2026 ANDRESON COSTA Advocacia. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal for Practice Details -->
-    <div class="modal" id="infoModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <h3 id="modalTitle" style="font-family: var(--font-title); font-size: 2rem; color: var(--gold-primary); margin-bottom: 15px;"></h3>
-            <p id="modalDescription" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"></p>
-            <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-gold" style="width: 100%;">
-                <i class="fa-brands fa-whatsapp"></i> Tirar Dúvidas no WhatsApp
-            </a>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script>
-        // Toggle Mobile Menu
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
 
@@ -1049,61 +959,18 @@
             navLinks.classList.toggle('active');
         });
 
-        // Close mobile menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Practice Area Details Modal Data
-        const areaDetails = {
-            "Direito Penal": "Atuação técnica e sigilosa em inquéritos policiais, defesas prévias, recursos em instâncias superiores, pedidos de liberdade provisória e acompanhamento de prisões em flagrante.",
-            "Direito Civil": "Consultoria e litígios em contratos, reparação de danos morais e materiais, litígios imobiliários, pós-venda, cobrança de dívidas e proteção patrimonial.",
-            "Direito da Saúde": "Ações judiciais com pedido de liminar (tutela de urgência) para cobertura de tratamentos urgentes, cirurgias, exames e fornecimento de medicamentos de alto custo negados por planos de saúde ou SUS.",
-            "Família e Sucessões": "Condução de divórcios judiciais e em cartório, partilha de bens, regulamentação de guarda e convivência familiar, execução de alimentos e suporte completo em inventários e testamentos."
-        };
-
-        const modal = document.getElementById('infoModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDescription = document.getElementById('modalDescription');
-        const closeModal = document.getElementById('closeModal');
-
-        document.querySelectorAll('.open-modal-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const area = btn.getAttribute('data-area');
-                if (areaDetails[area]) {
-                    modalTitle.textContent = area;
-                    modalDescription.textContent = areaDetails[area];
-                    modal.style.display = 'flex';
-                }
-            });
-        });
-
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Contact Form Submission (Redirects to WhatsApp for convenience)
         document.getElementById('appointmentForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
 
-            const text = `*Novo Contato do Site*%0A%0A*Nome:* ${name}%0A*Telefone:* ${phone}%0A*Assunto:* ${subject}%0A*Mensagem:* ${message}`;
-            
-            // Redirect to WhatsApp with formatted text (Replace number with your real WhatsApp)
-            window.open(`https://wa.me/5500000000000?text=${text}`, '_blank');
+            const text = `Olá, Dr. Andreson Costa.\n\nMeu nome é *${name}* (${phone}).\n*Assunto:* ${subject}\n*Resumo do Caso:* ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/5541991979594?text=${encodedText}`;
+
+            window.open(whatsappUrl, '_blank');
         });
     </script>
 </body>
