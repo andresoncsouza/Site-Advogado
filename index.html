@@ -37,6 +37,7 @@
             font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* Header & Navigation */
@@ -63,7 +64,7 @@
 
         .logo {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--accent-gold);
             text-decoration: none;
@@ -90,6 +91,14 @@
         }
 
         .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Menu Hamburger para Mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
             color: var(--accent-gold);
         }
 
@@ -328,7 +337,23 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-secondary);
+                padding: 1.5rem 2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
             .hero-title { font-size: 2.5rem; }
             .about-container, .contact-container { grid-template-columns: 1fr; }
         }
@@ -342,6 +367,9 @@
             <a href="#" class="logo">
                 <i class="fa-solid fa-scale-balanced"></i> ANDRESON COSTA ADVOCACIA
             </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#areas">Atuação</a></li>
@@ -357,7 +385,7 @@
             <div class="hero-subtitle">Excelência & Comprometimento</div>
             <h1 class="hero-title">Defesa Estratégica e Soluções Jurídicas de Alto Nível</h1>
             <p class="hero-description">Atuação especializada focada na proteção dos seus direitos com ética, discrição e rigor técnico.</p>
-            <a href="https://wa.me/5541991979594" target="_blank" class="btn-gold">
+            <a href="https://wa.me/5541991979594?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20jurídica." target="_blank" class="btn-gold">
                 <i class="fa-brands fa-whatsapp"></i> Falar com Advogado
             </a>
         </div>
@@ -394,7 +422,7 @@
             <div class="about-text">
                 <h3>Rigor Técnico e Defesa Implacável de Direitos</h3>
                 <p>O escritório atua de forma estratégica e personalizada, compreendendo as particularidades de cada caso para construir soluções jurídicas sólidas.</p>
-                <p>Unimos profundidade doutrinária e agilidade operacional para entregar resultados seguros e transparentes aos nossos clientes.</p>
+                <p>Unimos profundidade doutrinária e agilidade operacional para entregar resultados seguros e transparentes aos nossos clientes em Curitiba e região.</p>
             </div>
             <div class="area-card" style="text-align: center;">
                 <i class="fa-solid fa-balance-scale" style="font-size: 5rem; color: var(--accent-gold); margin-bottom: 2rem;"></i>
@@ -443,14 +471,14 @@
             </div>
 
             <!-- Formulário de Contato -->
-            <form class="contact-form" action="https://wa.me/5541991979594" method="get" target="_blank">
+            <form class="contact-form" id="whatsappForm">
                 <div class="form-group">
                     <label>Telefone / WhatsApp</label>
-                    <input type="text" placeholder="(41) 99197-9594" required>
+                    <input type="text" id="phoneInput" placeholder="(41) 99197-9594" required>
                 </div>
                 <div class="form-group">
                     <label>Assunto Principal</label>
-                    <select>
+                    <select id="subjectInput">
                         <option>Direito Penal</option>
                         <option>Direito Civil & Contratos</option>
                         <option>Direito do Consumidor</option>
@@ -459,7 +487,7 @@
                 </div>
                 <div class="form-group">
                     <label>Resumo do Caso</label>
-                    <textarea placeholder="Descreva brevemente a sua situação..."></textarea>
+                    <textarea id="messageInput" placeholder="Descreva brevemente a sua situação..."></textarea>
                 </div>
                 <button type="submit" class="btn-gold" style="width: 100%; text-align: center;">Enviar Mensagem</button>
             </form>
@@ -471,5 +499,28 @@
         <p>&copy; 2026 ANDRESON COSTA Advocacia. Todos os direitos reservados. Termos de Uso e Política de Privacidade.</p>
     </footer>
 
+    <!-- Script para envio dinâmico ao WhatsApp -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Envio do formulário integrando diretamente com o WhatsApp
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const phone = document.getElementById('phoneInput').value;
+            const subject = document.getElementById('subjectInput').value;
+            const message = document.getElementById('messageInput').value;
+
+            const text = `Olá, meu contato é ${phone}. Assunto: ${subject}. Resumo: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/5541991979594?text=${encodedText}`;
+
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
 </body>
 </html>
